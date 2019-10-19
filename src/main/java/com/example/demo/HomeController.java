@@ -39,14 +39,14 @@ public class HomeController {
         return "todoform";
     }
 
-//    @PostMapping("/process")
-//    public String processform(@Valid Todo todo, BindingResult result){
-//        if (result.hasErrors()) {
-//            return "todoform";
-//        }
-//        todoRepository.save(todo);
-//        return "redirect:/";
-//    }
+    @PostMapping("/process")
+    public String processform(@Valid Todo todo, BindingResult result){
+        if (result.hasErrors()) {
+            return "todoform";
+        }
+        todoRepository.save(todo);
+        return "redirect:/";
+    }
 
 
         @PostMapping("/add")

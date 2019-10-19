@@ -28,7 +28,9 @@ public class Todo {
 
     private String headshot;
 
+
     private String name;
+
     private String realname;
 
     public long getId() {
