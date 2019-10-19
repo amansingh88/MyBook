@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>My Book</title>
+    <title>My Images</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -13,8 +13,22 @@
 
 
 <div class="jumbotron">
-    <h1 class="display-4" align="center" >My Book</h1>
+    <h1 class="display-4" align="center" >My Images</h1>
     <hr class="my-4">
+
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" href="/add">Add an Image</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link active" href="/">Show all Images</a>
+        </li>
+    </ul>
+
+
+
+
     </div >
 
 <!--<form action="#" th:action="@{/process}" th:object="${todo}" method="post">-->
@@ -41,10 +55,13 @@
     <form method="post" action="/add" th:object="${todo}"
           enctype="multipart/form-data">
 <!--        <input type="hidden" th:field="*{id}" />-->
-        Name: <input type="text" th:field="*{name}" />
-        Details: <input type="text" th:field="*{realname}" />
+        Name: <input type="text" th:field="*{name}" /><br/><br/>
+
+        Details: <input type="text" th:field="*{realname}" /><br/><br/>
+
         <input type="file" name="file" /><br /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" /><br/><br/>
+
     </form>
 
 
